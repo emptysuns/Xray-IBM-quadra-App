@@ -27,8 +27,7 @@ jobs:
       IBM_CF_LOCATION: ${{ secrets.IBM_CF_LOCATION }}
       V2_UUID: ${{ secrets.V2_UUID }}
       V2_WS_PATH_VLESS: ${{ secrets.V2_WS_PATH_VLESS }}
-      IBM_CF_API: https://api.${IBM_CF_LOCATION}.cf.cloud.ibm.com
-      IBM_CF_APP_MEM: 64M
+   
 
     steps:
 
