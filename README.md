@@ -4,12 +4,13 @@
 
 2.每日定时重启（请更改重启时间，避免相同）
 
-4.内存选择64M
+3.内存选择64M
+
+4.IBM达拉斯适用
 
 
    | Secrets变量 | 形式 |
   | --------------------- | ----------- |
-  | `IBM_CF_LOCATION` | 伦敦填eu-gb，达拉斯填us-south |
   | `IBM_CF_USERNAME`       | IBM Cloud 邮箱地址 |
   | `IBM_CF_PASSWORD` | IBM Cloud 邮箱密码 |
   | `IBM_CF_APP_NAME1` | IBM Cloud 应用1程序名 |
