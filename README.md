@@ -4,8 +4,6 @@
 
 2.每日定时重启（请更改重启时间，避免相同）
 
-3.仅支持IBM达拉斯
-
 4.内存选择64M
 
 
@@ -18,6 +16,7 @@
   | `IBM_CF_APP_NAME3` | IBM Cloud 应用3程序名 |
   | `IBM_CF_APP_NAME4` | IBM Cloud 应用4程序名 |
   | `V2_UUID` | 自定义UUID码 |
+  | `V2_WS_PATH_VLESS` | 填入自定义PATH路径 |
   | `V2_WS_PATH_VLESS` | 填入自定义PATH路径 |
   
 
