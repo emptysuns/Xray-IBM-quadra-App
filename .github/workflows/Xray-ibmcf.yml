@@ -2,8 +2,8 @@
 name: IBM Cloud Foundry - Xray
  
 env:
-      IBM_CF_API: https://api.us-south.cf.cloud.ibm.com
-      IBM_CF_APP_MEM: 64M
+  IBM_CF_API: https://api.us-south.cf.cloud.ibm.com
+  IBM_CF_APP_MEM: 64M
 
 on:
   workflow_dispatch:
@@ -24,7 +24,6 @@ jobs:
       IBM_CF_APP_NAME2: ${{ secrets.IBM_CF_APP_NAME2 }}
       IBM_CF_APP_NAME3: ${{ secrets.IBM_CF_APP_NAME3 }}
       IBM_CF_APP_NAME4: ${{ secrets.IBM_CF_APP_NAME4 }}
-      IBM_CF_LOCATION: ${{ secrets.IBM_CF_LOCATION }}
       V2_UUID: ${{ secrets.V2_UUID }}
       V2_WS_PATH_VLESS: ${{ secrets.V2_WS_PATH_VLESS }}
    
