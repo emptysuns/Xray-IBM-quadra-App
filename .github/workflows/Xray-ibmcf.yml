@@ -22,6 +22,8 @@ jobs:
       IBM_CF_SPACE_NAME: ${{ secrets.IBM_CF_SPACE_NAME }}
       IBM_CF_APP_NAME1: ${{ secrets.IBM_CF_APP_NAME1 }}
       IBM_CF_APP_NAME2: ${{ secrets.IBM_CF_APP_NAME2 }}
+      IBM_CF_APP_NAME3: ${{ secrets.IBM_CF_APP_NAME3 }}
+      IBM_CF_APP_NAME4: ${{ secrets.IBM_CF_APP_NAME4 }}
       V2_UUID: ${{ secrets.V2_UUID }}
       V2_WS_PATH_VLESS: ${{ secrets.V2_WS_PATH_VLESS }}
 
@@ -107,6 +109,32 @@ jobs:
         cat << 123 > manifest.yml
         applications:
         - name: ${IBM_CF_APP_NAME2}
+          memory: ${IBM_CF_APP_MEM}
+          random-route: true
+          command: base64 -d config > config.json; ./xray -config=config.json
+          buildpacks:
+          - binary_buildpack
+    - name: Deploy Cloud Foundry App
+      run: cf push
+    
+    - name: Generate Manifest File
+      run: |
+        cat << 123 > manifest.yml
+        applications:
+        - name: ${IBM_CF_APP_NAME3}
+          memory: ${IBM_CF_APP_MEM}
+          random-route: true
+          command: base64 -d config > config.json; ./xray -config=config.json
+          buildpacks:
+          - binary_buildpack
+    - name: Deploy Cloud Foundry App
+      run: cf push
+      
+    - name: Generate Manifest File
+      run: |
+        cat << 123 > manifest.yml
+        applications:
+        - name: ${IBM_CF_APP_NAME4}
           memory: ${IBM_CF_APP_MEM}
           random-route: true
           command: base64 -d config > config.json; ./xray -config=config.json
