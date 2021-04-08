@@ -1,4 +1,4 @@
-#功能
+# 功能
 
 1.一次在 IBM 的 4个 不同的 Cloud Foundry应用上安装相同配置的Xray（vless+ws）
 
@@ -22,6 +22,7 @@
   | `XRAY_DOWNLOAD_URL` | 填入Xray下载链接，如：https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip |
   
   
+# 如何进行worker反代，请参考https://www.youtube.com/watch?v=2WGJbtsY6gw
   
 
 本项目基于 https://github.com/YG-tsj/Xray-IBM-LD 项目修改而来
