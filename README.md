@@ -27,25 +27,25 @@
   ## 单鸡worker反代代码
   
       addEventListener(
-  "fetch",event => {
+     "fetch",event => {
      let url=new URL(event.request.url);
      url.hostname="yourdomain.com";
       url.pathname="your_path";
      let request=new Request(url,event.request);
      event. respondWith(
        fetch(request)
+      )
+     }
      )
-  }
-)
 
 ## 多鸡worker反代代码（按天轮换使用）
 
-const Day0 = 'app0.herokuapp.com'
-const Day1 = 'app1.herokuapp.com'
-const Day2 = 'app2.herokuapp.com'
-const Day3 = 'app3.herokuapp.com'
-const Day4 = 'app4.herokuapp.com'
-addEventListener(
+    const Day0 = 'app0.herokuapp.com'
+    const Day1 = 'app1.herokuapp.com'
+    const Day2 = 'app2.herokuapp.com'
+    const Day3 = 'app3.herokuapp.com'
+    const Day4 = 'app4.herokuapp.com'
+    addEventListener(
     "fetch",event => {
     
         let nd = new Date();
@@ -70,7 +70,7 @@ addEventListener(
         event. respondWith(
             fetch(request)
         )
-    }
-)
+       }
+       )
 
 本项目基于 https://github.com/YG-tsj/Xray-IBM-LD 项目修改而来
