@@ -19,6 +19,8 @@
   | `IBM_CF_APP_NAME4` | IBM Cloud 应用4程序名 |
   | `V2_UUID` | 自定义UUID码 |
   | `V2_WS_PATH_VLESS` | 填入自定义PATH路径 |
+  | `XRAY_DOWNLOAD_URL` | 填入Xray下载链接，如：https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip |
+  
   
   
 
