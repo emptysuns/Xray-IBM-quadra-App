@@ -26,7 +26,7 @@
 
   ## 单鸡worker反代代码
   
-  addEventListener(
+      addEventListener(
   "fetch",event => {
      let url=new URL(event.request.url);
      url.hostname="yourdomain.com";
